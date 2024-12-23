@@ -54,7 +54,7 @@ export default function Textform({heading,mode,showAlert}) {
 
       <div className="container my-2" style={{color:mode==="dark"?"white":"#05427f"}}>
         <h1>Your text summary</h1>
-        <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
         <p>you will take {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length}min to read</p>
         <h2>Preview</h2>
         <p>{text.length>0?text:"enter text to preview"}</p>
